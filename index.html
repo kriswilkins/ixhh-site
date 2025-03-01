@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IXHH</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="cover-photo">
+        <h1>IX HOSTAGE HOUSE</h1>
+    </header>
+    
+    <nav class="navbar">
+        <button class="dropdown-btn">Social Media Pages</button>
+        <div class="dropdown-content">
+            <a href="https://x.com/IXHostageHouse" target="_blank">X</a>
+            <a href="https://www.facebook.com/NIXHHC" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/@IXHostageHouse" target="_blank">YouTube</a>
+            <a href="https://www.twitch.tv/ixhostagehouse" target="_blank">Twitch</a>
+            <a href="https://www.instagram.com/clanmackelly?fbclid=IwY2xjawIvbVlleHRuA2FlbQIxMAABHWo9n6y4LOWFU4hQ5UBuFI78FW1VrGWaG47mCdW0xRPeg7R6xZU_4RVQiw_aem_fBc36O5xF3mndqCL82-FYQ" target="_blank">Instagram</a>
+        </div>
+    </nav>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownBtn = document.querySelector('.dropdown-btn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            
+            dropdownBtn.addEventListener('click', () => {
+                dropdownContent.classList.toggle('show'); // Toggle the "show" class
+            });
+    
+            // Optional: Close the dropdown if clicked outside
+            document.addEventListener('click', (event) => {
+                if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+<div class="content-wrapper">
+    <section class="centered-photo">
+        <img src="images/CottageBG2.jpg" alt="Centered Image">
+    </section>
+    
+    <section class="mission-statement">
+        <div class="text">
+            <h2>Our Mission</h2>
+            <p></p>
+        </div>
+        <div class="photo">
+            <img src="images/Badge.png" alt="Mission Photo">
+        </div>
+    </section>
+    
+    <section class="coming-soon">
+        <h2>Coming Soon</h2>
+        <p>Exciting projects are on the way! Stay tuned for updates.</p>
+    </section>
+</div>
+</body>
+</html>
