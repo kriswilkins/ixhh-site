@@ -103,8 +103,8 @@
     align-items: center;
     margin: 10px;
     padding: 10px;                /* Reduced padding for smaller screens */
-    border: 3px solid #3498db;
-    background-color: #eaf6fb;
+    border: 3px solid #aba000;
+    background-color: #fff799;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -163,18 +163,10 @@
     text-align: center;
     margin: 10px;
     padding: 10px;
-    border: 3px solid #f39c12; /* Add an orange border */
-    background-color: #fef5e6; /* Light orange background */
+    border: 3px solid #ff0000; /* Add an orange border */
+    background-color: #f69679; /* Light orange background */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow */
-}
-.coming-soon h2 {
-    color: #d35400; /* Deep orange for the heading */
-    font-family: 'Arial', sans-serif;
-}
-.coming-soon p {
-    color: #7f8c8d; /* Gray for the text */
-    font-family: 'Verdana', sans-serif;
 }
 
 /* Content Wrapper */
