@@ -37,19 +37,6 @@
     overflow: hidden;                /* Hides anything that exceeds the div */
 }
 
-.centered-photo {
-    padding: 20px;               /* Same padding as the mission and coming soon sections */
-    background-color: transparent; /* Optional: Ensure no background clashes */
-}
-
-.centered-photo img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh;             /* Prevents image from being too large on mobile */
-    display: block;
-    margin: 0 auto;               /* Centers the image */
-}
-
 .navbar {
     position: sticky;
     top: 0;
