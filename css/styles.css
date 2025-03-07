@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +6,12 @@
 }
 
 body {
-    background-image: url('../images/fleur-de-lys-Wallpapper_DARK.png'); /* Replace with your image file path */
-    background-repeat: repeat; /* Ensure the image tiles */
-    background-size: 10%; /* Adjust the size of each tile relative to the viewport */
-    background-position: top left; /* Starts tiling from the top-left corner */
-    margin: 0; /* Remove default browser margins */
-    padding: 0; /* Remove default browser padding */
+    background-image: url('../images/fleur-de-lys-Wallpapper_DARK.png'); 
+    background-repeat: repeat;
+    background-size: 10%; 
+    background-position: top left; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .cover-photo {
@@ -22,167 +22,126 @@ body {
     color: white;
     text-align: center;
     padding: 0;
-    height: 10vh;                  /* Increased height for better proportions */
+    height: 10vh; 
     position: relative;
 }
 
 .cover-photo h1 {
-    color: white; /* White text color */
+    color: white; 
     text-shadow: 
-        -1px -1px 0 black,  /* Top-left outline */
-         1px -1px 0 black,  /* Top-right outline */
-        -1px  1px 0 black,  /* Bottom-left outline */
-         1px  1px 0 black;  /* Bottom-right outline */
-    font-family: 'Arial', sans-serif; /* Modern and readable font */
-    font-size: 2.5rem; /* Default font size for desktop */
+        -1px -1px 0 black, 
+         1px -1px 0 black, 
+        -1px  1px 0 black, 
+         1px  1px 0 black;  
+    font-family: 'Arial', sans-serif; 
+    font-size: 2.5rem; 
     margin: 0;
-    position: absolute;              /* Enables precise positioning */
-    top: 50%;                        /* Centers vertically */
-    left: 50%;                       /* Centers horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    white-space: nowrap;             /* Prevents the text from wrapping */
-    width: 100%;                     /* Makes the text span the full div width */
-    text-align: center;              /* Ensures text is centered within the div */
-    overflow: hidden;                /* Hides anything that exceeds the div */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    white-space: nowrap; 
+    width: 100%; 
+    text-align: center;
+    overflow: hidden;
 }
 
 .navbar {
-    display: flex; /* Use flexbox to keep links in a horizontal row */
-    justify-content: space-evenly; /* Even spacing between each link */
-    align-items: center; /* Align links vertically in the center */
-    position: sticky; /* Keep navbar fixed at the top */
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    position: -webkit-sticky; 
+    position: sticky; 
     top: 0;
     z-index: 1000;
-    background: #333; /* Navbar background color */
-    padding: 10px 20px; /* Padding around the links */
-    flex-wrap: nowrap; /* Prevent wrapping to a new row */
+    background: #333; 
+    padding: 10px 20px; 
+    flex-wrap: nowrap; 
 }
 
 .navbar a {
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size */
-    transition: color 0.3s ease; /* Smooth hover effect */
-    margin: 0 10px; /* Add spacing between links (optional for extra control) */
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    transition: color 0.3s ease; 
+    margin: 0 10px; 
 }
 
 .navbar a:hover {
     color: #ff8800;
 }
 
-/* Mission Section */
 .mission-statement {
-    display: grid; /* Enable CSS Grid */
-    grid-template-columns: 1fr 1fr; /* Two equal columns for text and image */
-    grid-template-rows: auto; /* Rows adjust to content */
-    gap: 20px; /* Spacing between grid items */
-    align-items: center; /* Align items at the top of the grid */
-    background-image: url('../images/Parchment.jpg'); /* Replace with your background */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 20px; 
+    align-items: center; 
+    background-image: url('../images/Parchment.jpg');
     background-repeat: repeat;
     padding: 60px;
     margin: 20px;
     position: relative;
     text-align: center;
-}
-
-/* Text Column */
-.mission-statement .text {
-    display: flex; /* Use flexbox for text alignment */
-    flex-direction: column; /* Stack the heading and paragraph vertically */
-    justify-content: center; /* Center the text vertically within its grid cell */
-    align-items: center; /* Center the text horizontally within its grid cell */
-    text-align: left; /* Align the text itself */
-    grid-column: 1; /* Place text in the first column */
-    grid-row: 1; /* Place text in the first row */
-    font-family: 'CustomFont', sans-serif; /* Custom font */
-    font-size: 18px; /* Adjust size for readability */
-    margin: 0 auto; /* Center the container itself in case of extra space */
-}
-
-/* Photo Column */
-.mission-statement .photo {
-    display: flex; /* Use flexbox to align the image */
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
-    text-align: center; /* Ensure text or content within aligns correctly */
-    grid-column: 2; /* Place photo in the second column */
-    grid-row: 1; /* Place photo in the first row */
+    font-size: 1.2rem; /* Ensures font size is consistent across browsers */
+    line-height: 1.5; /* Improves readability */
 }
 
 .mission-statement .photo img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 50%; /* Reduces size of image */
+    height: auto; /* Ensures responsive scaling */
+    margin: 0 auto; /* Centers the image */
+    display: block;
 }
 
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-    .mission-statement {
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: auto auto; /* Two rows: image above text */
-    }
-
-    .mission-statement .photo {
-        grid-column: 1; /* Image in the first column */
-        grid-row: 1; /* Image in the first row */
-    }
-
-    .mission-statement .text {
-        grid-column: 1; /* Text in the first column */
-        grid-row: 2; /* Text below the image */
-    }
-}
-
-/* Horizontal Borders (top and bottom) */
 .mission-statement::before,
 .mission-statement::after {
     content: '';
     position: absolute;
-    width: 100%; /* Stretch the border across the width */
-    height: 50px; /* Height of the horizontal border image */
-    background-image: url('../images/Border1Hor.png'); /* Replace with your horizontal border image */
-    background-repeat: repeat-x; /* Repeat the border horizontally */
-    background-size: auto; /* Optional: Adjust size */
+    width: 100%; 
+    height: 50px; 
+    background-image: url('../images/Border1Hor.png'); 
+    background-repeat: repeat-x; 
+    background-size: contain; /* Ensures the borders fit well */
 }
 
 .mission-statement::before {
-    top: 0; /* Position the top border */
+    top: 0; 
     left: 0;
 }
 
 .mission-statement::after {
-    bottom: 0; /* Position the bottom border */
+    bottom: 0; 
     left: 0;
 }
 
-/* Vertical Borders (left and right) */
 .mission-statement .vertical-border {
     content: '';
     position: absolute;
-    height: 100%; /* Stretch vertically across the height */
-    width: 50px; /* Width of the vertical border image */
-    background-image: url('../images/Border1Ver.png'); /* Replace with your vertical border image */
-    background-repeat: repeat-y; /* Repeat the border vertically */
-    background-size: auto; /* Optional: Adjust size */
+    height: 100%; 
+    width: 50px; 
+    background-image: url('../images/Border1Ver.png'); 
+    background-repeat: repeat-y; 
+    background-size: contain;
 }
 
 .mission-statement .vertical-border.left {
     top: 0;
-    left: 0; /* Place on the left edge */
+    left: 0; 
 }
 
 .mission-statement .vertical-border.right {
     top: 0;
-    right: 0; /* Place on the right edge */
+    right: 0; 
 }
 
-/* Corner Decorations */
 .mission-statement .corner {
     position: absolute;
-    width: 50px; /* Width of the corner image */
-    height: 50px; /* Height of the corner image */
-    background-image: url('../images/BorderCorner.png'); /* Replace with your corner image */
-    background-repeat: no-repeat; /* Ensure no repetition */
-    background-size: contain; /* Proper scaling */
+    width: 50px; 
+    height: 50px; 
+    background-image: url('../images/BorderCorner.png'); 
+    background-repeat: no-repeat; 
+    background-size: contain; 
     z-index: 2;
 }
 
@@ -206,102 +165,69 @@ body {
     right: 0;
 }
 
-.mission-statement .photo img {
-    max-width: 50%;
-    max-height: 50%;
-    border-radius: 5px;
-}
-
-@media (max-width: 768px) {    
-    body {
-        font-size: 14px;         /* Smaller font size for readability on mobile */
-        background-size: 20%; /* Larger tiles for smaller screens */
-    }
-    
-    h1, h2 {
-        font-size: 1.5rem;       /* Adjust headings for small screens */
-    }
-    
-    .coming-soon {
-        padding: 10px;
-        margin: 10px;
-    }
-    
-    .navbar {
-        justify-content: space-between;
-    }
-    
-    .navbar a {
-        margin: 10px 0;          /* Add spacing between links */
-        font-size: 16px; /* Scale down text size for smaller screens */
-    }
-    
-    .cover-photo h1 {
-        font-size: 1.5rem;          /* Scale down the font size for smaller screens */
-    }
-
-}
-
 .coming-soon {
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    position: relative;
     text-align: center;
+    justify-content: center; /* Centers text vertically */
+    align-items: center; /* Centers text horizontally */
     padding: 60px;
     margin: 20px;
-    background-image: url('../images/Parchment.jpg'); /* Replace with your background */
+    background-image: url('../images/Parchment.jpg'); 
     background-repeat: repeat;
-    position: relative; /* For positioning corner elements */
+    font-size: 1.2rem; /* Matches font size for consistency */
+    line-height: 1.5;
 }
 
-/* Horizontal Borders (top and bottom) */
 .coming-soon::before,
 .coming-soon::after {
     content: '';
     position: absolute;
-    width: 100%; /* Stretch the border across the width */
-    height: 50px; /* Height of the horizontal border image */
-    background-image: url('../images/Border1Hor.png'); /* Replace with your horizontal border image */
-    background-repeat: repeat-x; /* Repeat the border horizontally */
-    background-size: auto; /* Optional: Adjust size */
+    width: 100%; 
+    height: 50px; 
+    background-image: url('../images/Border1Hor.png'); 
+    background-repeat: repeat-x; 
+    background-size: contain; 
 }
 
 .coming-soon::before {
-    top: 0; /* Position the top border */
+    top: 0; 
     left: 0;
 }
 
 .coming-soon::after {
-    bottom: 0; /* Position the bottom border */
+    bottom: 0; 
     left: 0;
 }
 
-/* Vertical Borders (left and right) */
 .coming-soon .vertical-border {
     content: '';
     position: absolute;
-    height: 100%; /* Stretch vertically across the height */
-    width: 50px; /* Width of the vertical border image */
-    background-image: url('../images/Border1Ver.png'); /* Replace with your vertical border image */
-    background-repeat: repeat-y; /* Repeat the border vertically */
-    background-size: auto; /* Optional: Adjust size */
+    height: 100%; 
+    width: 50px; 
+    background-image: url('../images/Border1Ver.png'); 
+    background-repeat: repeat-y; 
+    background-size: cover; 
 }
 
 .coming-soon .vertical-border.left {
     top: 0;
-    left: 0; /* Place on the left edge */
+    left: 0; 
 }
 
 .coming-soon .vertical-border.right {
     top: 0;
-    right: 0; /* Place on the right edge */
+    right: 0; 
 }
 
-/* Corner Decorations */
 .coming-soon .corner {
-    position: absolute;
-    width: 50px; /* Width of the corner image */
-    height: 50px; /* Height of the corner image */
-    background-image: url('../images/BorderCorner.png'); /* Replace with your corner image */
-    background-repeat: no-repeat; /* Ensure no repetition */
-    background-size: contain; /* Proper scaling */
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url('../images/BorderCorner.png'); 
+    background-repeat: no-repeat; 
+    background-size: contain; 
     z-index: 2;
 }
 
@@ -325,13 +251,136 @@ body {
     right: 0;
 }
 
+
+
 @font-face {
-    font-family: 'pValiant'; /* Name your font */
-    src: url('../fonts/Prince\ Valiant.ttf') format('truetype'); /* Path to the font file */
+    font-family: 'pValiant';
+    src: url('../fonts/PrinceValiant.ttf') format('truetype'); 
 }
 
 .custom-text {
-    font-family: 'pValiant', sans-serif; /* Apply your custom font */
-    font-size: 20px; /* Adjust as needed */
-    color: #333; /* Text color */
+    font-family: 'pValiant', sans-serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; 
+        background-size: 20%; 
+    }
+    
+    h1, h2 {
+        font-size: 1.5rem; 
+    }
+
+    .cover-photo h1 {
+        font-size: 1.5rem; 
+    }
+    
+    .navbar {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        margin: 10px 0; 
+        font-size: 16px; 
+    }
+
+    .mission-statement {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .mission-statement .photo {
+        grid-column: 1; 
+        grid-row: 1; 
+    }
+
+    .mission-statement .text {
+        grid-column: 1; 
+        grid-row: 2; 
+    }
+
+    .coming-soon {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .coming-soon h2 {
+        font-size: 1.2rem;
+    }
+    
+    .navbar a:hover {
+        color: #ff8800;
+    }
+
+    .cover-photo h1 {
+        
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+        text-align: center; /* Optional: Center-align text for a clean look */
+    }
+
+    /* Borders and Corners */
+    .mission-statement::before,
+    .mission-statement::after,
+    .coming-soon::before,
+    .coming-soon::after {
+        height: 15px; /* Smaller horizontal borders */
+        background-size: contain; /* Scale proportionally */
+    }
+
+    .mission-statement .vertical-border,
+    .coming-soon .vertical-border {
+        width: 15px; /* Narrower vertical borders */
+        background-size: contain;
+    }
+
+    .mission-statement .corner,
+    .coming-soon .corner {
+        width: 15px; /* Smaller corner images */
+        height: 15px;
+        background-size: contain;
+    }
+
+    /* Bottom Border Alignment */
+    .mission-statement::after,
+    .coming-soon::after {
+        bottom: 0; /* Perfectly align the bottom border */
+        left: 0;
+        height: 15px; /* Match the scaled-down border size */
+        background-size: contain;
+        /*transform: translateY(50%); /* Align with parchment background */
+    }
+
+    /* Section Padding and Text */
+    .mission-statement,
+    .coming-soon {
+        font-size: 0.8rem; /* Reduce text size for mobile */
+        padding: 50px; 
+    }
+
+    /* Images */
+    .mission-statement .photo img,
+    .coming-soon .photo img {
+        max-width: 50%; 
+        height: auto;
+        margin: 0 auto; 
+    }
+}
+
+.site-footer {
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    color: white; 
+    font-family: 'pValiant', sans-serif;
+    text-shadow: 
+        -1px -1px 2px black, 
+         1px -1px 2px black, 
+        -1px  1px 2px black, 
+         1px  1px 2px black; 
 }
